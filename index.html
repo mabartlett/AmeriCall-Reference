@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" 
+	      content="The AmeriCall Agent Quick Reference is a reference page for AmeriCall employees." />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	<!-- This was made by Marcus Bartlett. It is an adaptation of the Red Book. -->
+	<!-- Contact me at marcusbartlett@americall.com. -->
+	<title>AmeriCall Agent Quick Reference</title>
+	<style>
+		/**** Base ****/
+		html,
+		body {
+			width: 100%;
+			font-size: 16px;
+			margin: 0;
+			float: left;
+			box-sizing: border-box;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		/**** Layout ****/
+		#container {
+			float: left;
+			box-sizing: border-box;
+			width: calc(100% - 300px);
+		}
+
+		aside[id="contents"] {
+			right: 0;
+			width: 300px;
+			box-sizing: border-box;
+			height: 100vh;
+			position: fixed;
+			padding: 1rem;
+		}
+
+		/**** Components ****/
+		header h1 {
+			text-align: center;
+			margin: 0;
+			padding: 2.5rem 0;
+		}
+
+		.section {
+			box-sizing: border-box;
+			margin: 0;
+			overflow: auto;
+			padding: 2.5rem 1.8rem;
+		}
+
+		.section h2 {
+			margin-top: 0;
+			padding-bottom: 0.2rem;
+			border-bottom: 1px solid #1e62ae;
+		}
+
+		.section > p:last-of-type,
+		.section > ol:last-of-type {
+			margin-bottom: 0;
+		}
+
+		li + li {
+			margin-top: 0.3rem;
+		}
+	
+		td {
+			padding: 0.2rem;
+		}
+
+		.section p,
+		.section li {
+			max-width: 45rem;
+			line-height: 1.25rem;
+		}
+
+		/* Style specific sections */	
+		#abbreviationstable1 {
+			float: left;
+		}
+
+		#abbreviationstable2 {
+			float: left;
+			margin-left: 0.3rem;
+		}
+		
+		#abbreviations .bold {
+			font-weight: bold;
+		}
+
+		#clearleft {
+			clear: left;
+			padding-top: 1rem;
+		}
+
+		#phone td {
+			border: 1px solid #363030;
+			text-align: center;
+			padding: 0.5rem;
+		}
+
+		/**** State ****/
+		a:hover {
+			text-decoration: none;
+		}
+
+		/**** Theme ****/
+		html,
+		body {
+			font-family: 'Arial', sans-serif;
+		}
+
+		h1,
+		h2,
+		h3 {
+			font-family: 'Georgia', serif;
+		}
+
+		header,
+		h1 {
+			background-color: #1e62ae;
+			color: #ffffff;
+		}
+
+		aside[id="contents"] {
+			color: #ffffff;
+			background-color: #363030;
+		}
+
+		aside[id="contents"] a {
+			color: #ffffff;
+		}
+
+		.section:nth-of-type(odd) {
+			background-color: #ffffff;
+		}
+
+		.section:nth-of-type(even) {
+			background-color: #ede8e8;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+
+		#keyboard table .gray,
+		#alpha table tr:nth-child(even),
+		#abbreviations table tr:nth-child(even) {
+			background-color: #c6c0c0;
+		}
+
+		#keyboard tr + tr,
+		#alpha tr + tr,
+		#abbreviations tr + tr {
+			border-top: 1px solid #363630;
+		}
+
+		#phone td {
+			background-color: #ffffff;
+		}
+
+		#specialsexample {
+			font-family: 'Consolas', monospace;
+			background-color: #ffffff;
+			border: 1px solid #363030;
+			padding: 0.25rem;
+		}
+	</style>
+</head>
+<body>
+  
+	<aside id="contents">
+		<h2>Table of Contents</h2>
+		<ol>
+			<li><a href="#keyboard">Keyboard Commands</a></li>
+			<li><a href="#alpha">Spelling Alphabet</a></li>
+			<li><a href="#abbreviations">Abbreviations</a></li>
+			<li><a href="#dispatch">Sending Calls to Dispatch</a></li>
+			<li><a href="#phone"> Phone Keypad Letters</a></li>
+			<li><a href="#specials">Specials</a></li>
+			<li><a href="#error">Error Reporting</a></li>
+			<li><a href="#forbidden">The Five Forbidden Phrases</a></li>
+			<li><a href="#spanish">Spanish Translation Instructions</a></li>
+			<li><a href="#links">Quick Links</a></li>
+			<li><a href="#rules">Rules and Regulations</a></li>
+			<li><a href="#bomb">Bomb Threats</a></li>
+		</ol>
+	</aside>
+
+	<div id="container" role="region">
+
+	<header>
+		<h1>AmeriCall Agent Quick Reference</h1>	
+	</header>
+
+	<section id="keyboard" class="section">
+		<h2>Keyboard Commands</h2>
+		<table>
+			<tr><td>F1</td><td>Answer/Hold</td></tr>
+			<tr><td>F2</td><td>Answer/Hold</td></tr>
+			<tr><td>F3</td><td>Answer/Hold</td></tr>
+			<tr class="gray"><td>Ctrl F1</td><td>Fetch</td></tr>
+			<tr class="gray"><td>Ctrl F2</td><td>Repeat</td></tr>
+			<tr class="gray"><td>Ctrl F3</td><td>Park</td></tr>
+			<tr><td>F4</td><td>Close Call Entirely</td></tr>
+			<tr><td>Alt F4</td><td>Disconnect Call</td></tr>
+			<tr class="gray"><td>F5</td><td>Voicemail A</td></tr>
+			<tr class="gray"><td>Alt F5</td><td>Voicemail B (Erase)</td></tr>
+			<tr class="gray"><td>Ctrl F5</td><td>Voicemail C</td></tr>
+			<tr><td>F6</td><td>Dial String</td></tr>
+			<tr><td>Alt F6</td><td>Hold and Park</td></tr>
+			<tr><td>Ctrl F6</td><td>Dial List</td></tr>
+			<tr class="gray"><td>F7</td><td>New Message</td></tr>
+			<tr class="gray"><td>Alt F7</td><td>Mark Urgent</td></tr>
+			<tr class="gray"><td>Ctrl F7</td><td>Move to Bottom of Message</td></tr>
+			<tr><td>F8</td><td>New Special</td></tr>
+			<tr><td>Alt F8</td><td>Save Message</td></tr>
+			<tr><td>Ctrl F8</td><td>Patch</td></tr>
+			<tr class="gray"><td>F9</td><td>Deliver Message</td></tr>
+			<tr class="gray"><td>Ctrl F9</td><td>Bring Back Script</td></tr>
+			<tr class="gray"><td>Alt F9</td><td>Fast Forward</td></tr>
+			<tr><td>F10</td><td>Infinity Menu</td></tr>
+			<tr><td>Alt F10</td><td>Account Directory</td></tr>
+			<tr><td>Ctrl F10</td><td>Message History</td></tr>
+			<tr class="gray"><td>F11</td><td>Timestamp</td></tr>
+			<tr><td>F12</td><td>Turn Off</td></tr>
+			<tr><td>Alt F12</td><td>Turn On</td></tr>
+		</table>
+	</section>
+	
+	<section id="alpha" class="section">
+		<h2>Spelling Alphabet</h2>
+		<table>
+			<tr><td>A</td><td>Alpha</td></tr>
+			<tr><td>B</td><td>Beta</td></tr>
+			<tr><td>C</td><td>Charlie</td></tr>
+			<tr><td>D</td><td>Delta</td></tr>
+			<tr><td>E</td><td>Echo</td></tr>
+			<tr><td>F</td><td>Foxtrot</td></tr>
+			<tr><td>G</td><td>Golf</td></tr>
+			<tr><td>H</td><td>Hotel</td></tr>
+			<tr><td>I</td><td>India</td></tr>
+			<tr><td>J</td><td>Juliet</td></tr>
+			<tr><td>K</td><td>Kilo</td></tr>
+			<tr><td>L</td><td>Lima</td></tr>
+			<tr><td>M</td><td>Mike</td></tr>
+			<tr><td>N</td><td>November</td></tr>
+			<tr><td>O</td><td>Oscar</td></tr>
+			<tr><td>P</td><td>Papa</td></tr>
+			<tr><td>Q</td><td>Quebec</td></tr>
+			<tr><td>R</td><td>Romeo</td></tr>
+			<tr><td>S</td><td>Sierra</td></tr>
+			<tr><td>T</td><td>Tango</td></tr>
+			<tr><td>U</td><td>Uniform</td></tr>
+			<tr><td>V</td><td>Victor</td></tr>
+			<tr><td>W</td><td>Whiskey</td></tr>
+			<tr><td>X</td><td>X-Ray</td></tr>
+			<tr><td>Y</td><td>Yankee</td></tr>
+			<tr><td>Z</td><td>Zulu</td></tr>
+		</table>
+	</section>
+	
+	<section id="abbreviations" class="section">
+		<h2>Abbreviations</h2>
+		<table id="abbreviationstable1">
+			<tr><td>A/N</td><td>Alpha Numeric</td></tr>
+			<tr><td>A/S</td><td>Answering Service</td></tr>
+			<tr><td>ADV</td><td>Advise</td></tr>
+			<tr><td>AGN</td><td>Again</td></tr>
+			<tr class="bold"><td>ALN</td><td>Allenmore Hospital</td></tr>
+			<tr class="bold"><td>AM</td><td>Morning</td></tr>
+			<tr class="bold"><td>APPT</td><td>Appointment</td></tr>
+			<tr class="bold"><td>APT</td><td>Apartment</td></tr>
+			<tr class="bold"><td>ASAP</td><td>As Soon as Possible</td></tr>
+			<tr class="bold"><td>ATTN</td><td>Attention</td></tr>
+			<tr class="bold"><td>AVE</td><td>Avenue</td></tr>
+			<tr><td>B/AT</td><td>Back at</td></tr>
+			<tr><td>B/L or BKLN</td><td>Backline</td></tr>
+			<tr class="bold"><td>BRDM</td><td>Bedroom</td></tr>
+			<tr class="bold"><td>BLDG</td><td>Building</td></tr>
+			<tr><td>C/B</td><td>Call Back</td></tr>
+			<tr><td>C/E</td><td>Call Exchange</td></tr>
+			<tr><td>C/F</td><td>Call Forward</td></tr>
+			<tr><td>CK</td><td>Check</td></tr>
+			<tr><td>C/N</td><td>Consulting Nurse</td></tr>
+			<tr><td>C/P</td><td>Calling Party</td></tr>
+			<tr><td>CCX</td><td>Cross Connect</td></tr>
+			<tr><td>CLD</td><td>Called</td></tr>
+			<tr><td>CLG</td><td>Calling</td></tr>
+			<tr><td>CLR</td><td>Caller</td></tr>
+			<tr><td>CMC</td><td>Capitol Medical Center</td></tr>
+			<tr><td>COL</td><td>Collect</td></tr>
+			<tr class="bold"><td>CUST</td><td>Customer</td></tr>
+			<tr class="bold"><td>EMERG</td><td>Emergency</td></tr>
+			<tr class="bold"><td>ER</td><td>Emergency Room</td></tr>
+			<tr class="bold"><td>EXAM</td><td>Examination</td></tr>
+			<tr class="bold"><td>EXT</td><td>Extension</td></tr>
+			<tr><td>GFD</td><td>Gone for Day</td></tr>
+			<tr><td>G/O</td><td>Give out</td></tr>
+			<tr class="bold"><td>GS</td><td>Good Samaritan</td></tr>
+			<tr class="bold"><td>GYN</td><td>Gynecology</td></tr>
+			<tr><td>HC</td><td>Hold Call</td></tr>
+			<tr class="bold"><td>HOSP</td><td>Hospital</td></tr>
+			<tr class="bold"><td>HRS</td><td>Hours</td></tr>
+			<tr><td>INA</td><td>If Not Available</td></tr>
+			<tr><td>LD</td><td>Long Distance</td></tr>
+			<tr><td>LM</td><td>Left Message</td></tr>
+			<tr><td>LW</td><td>Left Word</td></tr>
+		</table>
+		<table id="abbreviationstable2">
+			<tr class="bold"><td>MEDS</td><td>Medication</td></tr>
+			<tr><td>NA</td><td>No Answer</td></tr>
+			<tr><td>NIS</td><td>Not In Service</td></tr>
+			<tr><td>N/O</td><td>Number Out</td></tr>
+			<tr><td>N/R</td><td>No Response</td></tr>
+			<tr><td>OB</td><td>Obstetrics</td></tr>
+			<tr><td>OC</td><td>On Call</td></tr>
+			<tr class="bold"><td>OFC</td><td>Office</td></tr>
+			<tr><td>OOT</td><td>Out of Town</td></tr>
+			<tr><td>OPR</td><td>Operation</td></tr>
+			<tr><td>OTL</td><td>Out to Lunch</td></tr>
+			<tr><td>P/C</td><td>Person Calling</td></tr>
+			<tr><td>PATCH</td><td>Cross Connect</td></tr>
+			<tr class="bold"><td>PEDS</td><td>Pediatrics</td></tr>
+			<tr><td>PERS</td><td>Personal</td></tr>
+			<tr><td>PGD</td><td>Paged</td></tr>
+			<tr><td>PGCE</td><td>Paged to Call Exchange</td></tr>
+			<tr><td>PGNO</td><td>Paged Number Out</td></tr>
+			<tr><td>PGR</td><td>Pager</td></tr>
+			<tr><td>PLS</td><td>Please</td></tr>
+			<tr><td>PLS CL</td><td>Please Call</td></tr>
+			<tr class="bold"><td>PM</td><td>Evening</td></tr>
+			<tr class="bold"><td>PROV</td><td>Providence Hospital</td></tr>
+			<tr class="bold"><td>PS</td><td>Puget Sound Behavioral</td></tr>
+			<tr class="bold"><td>PT</td><td>Patient</td></tr>
+			<tr><td>PU</td><td>Pick Up</td></tr>
+			<tr><td>RE</td><td>Regarding</td></tr>
+			<tr class="bold"><td>RES</td><td>Residence</td></tr>
+			<tr><td>RLYD</td><td>Relayed</td></tr>
+			<tr class="bold"><td>RN</td><td>Nurse</td></tr>
+			<tr class="bold"><td>RX</td><td>Prescription</td></tr>
+			<tr class="bold"><td>SC</td><td>St. Clare Hospital</td></tr>
+			<tr class="bold"><td>SF</td><td>St. Francis Hospital</td></tr>
+			<tr class="bold"><td>SJ</td><td>St. Joseph Hospital</td></tr>
+			<tr><td>SO</td><td>Signed Out</td></tr>
+			<tr class="bold"><td>SPH</td><td>St. Peter Hospital</td></tr>
+			<tr><td>SVC</td><td>Service</td></tr>
+			<tr><td>TAS</td><td>The Answering Service</td></tr>
+			<tr class="bold"><td>TG</td><td>Tacoma General</td></tr>
+			<tr><td>WB</td><td>Will Be</td></tr>
+			<tr><td>WC</td><td>Will Call</td></tr>
+			<tr><td>WCB</td><td>Will Call Back</td></tr>
+		</table>
+		<p id="clearleft">Only the abbreviations in bold can be used in the body of a message.</p>
+	</section>
+	
+	<section id="phone" class="section">
+		<h2> Phone Keypad Letters</h2>
+		<table>
+			<tr><td>1 <br />&nbsp;</td><td>2 <br /> A B C</td><td>3 <br /> D E F</td></tr>
+			<tr><td>4 <br /> G H I</td><td>5 <br /> J K L</td><td>6 <br /> M N O</td></tr>
+			<tr><td>7 <br /> P Q R S</td><td>8 <br /> T U V</td><td>9 <br /> W X Y Z</td></tr>
+		</table>
+	</section>
+
+	<section id="dispatch" class="section">
+		<h2>Sending Calls to Dispatch</h2>
+		All calls are to go to dispatch unless otherwise stated on the account. Remember to check 
+		your info pages for how to best take the message.
+		<br />
+		<ol>
+			<li>Make sure the call is disconnected.</li>
+			<li>Timestamp and document the message if you advised a time-frame, called out, 
+			    or patched.</li>
+			<li>Make sure the message has been taken properly with correct information.</li>
+			<li>If the call was relayed; document, save, and deliver the message.</li>
+			<li>If the call needs to be worked further, save it and send it to dispatch.</li>
+		</ol>
+	</section>
+	
+	<section id="specials" class="section">
+		<h2>Specials</h2>
+		<p>Specials are temporary notes that change how one handles calls for a certain account.</p>
+		<p>Any temporary changes an on-call person requests can be entered in a special. Below is 
+		   the proper formatting.</p>
+		
+		<div id="specialsexample">
+			Mon 12/30 8a - Tue 12/31 5p... Title of Special<br />
+			<br />
+			This is where the body of the special goes.<br />
+		</div><!--End specialsexample-->
+
+		<p><strong>Any permanent changes must be sent by email to the operations manager.</strong></p>
+	</section>
+	
+	<section id="error" class="section">
+		<h2>Error Reporting</h2>
+		<ol>
+			<li>Press the "Print Screen/SysRq" button on your keyboard.</li>
+			<li>Paste the image into WordPad and note at the bottom the following:</li>
+				<ul>
+					<li>The account name and number</li>
+					<li>Your name</li>
+					<li>The date and time</li>
+					<li>And your actions leading up to the error</li>
+				</ul>
+			<li>Save the document.</li>
+			<li>Send the document as an attachment to support@americall.com. In the body of the 
+			    email, include the information from step 2.</li>
+		</ol>
+	</section>
+
+	<section id="spanish" class="section">
+		<h2>Spanish Translation Instructions</h2>
+		<p>Before following these instructions, check with the supervisor on duty for a Spanish 
+			speaker on shift if Spanish is requested.
+		</p>
+		<ol>
+			<li>Enter the account number into your Notepad that you need translation for.</li>
+			<li>If the account is an eCreator account, cancel the script and proceed all the way
+				to the call closed page. <em>Do not F4 the call.</em> 
+			</li>
+			<li>Fetch account 70007.</li>
+			<li>Call 1(800)225-5254, which is listed on the second information page.</li>
+			<li>When the language bank answers, advise them you are from AmeriCall, provide them
+				with the code "AMCALL," the account number you need assistance with, your agent
+				name, your agent number, and the language you need an interpreter for.
+			</li>
+			<li>Once you have the interpreter on the line, fetch the original account.</li>
+			<li>Conference the call by using Ctrl+F8. If you accidentally patch teh call, you can
+				simply press F1 to return to the conference state</li>
+		</ol>
+	</section>
+	
+	<section id="forbidden" class="section">
+		<h2>The Five Forbidden Phrases</h2>
+		<h3>I Don't Know</h3>
+		<p>Saying “I don’t know” undermines caller confidence and does not add value.  An 
+		   alternative to saying "I don't know" is "That's a good question. Let me find out for 
+		   you," or "That's a good question, the best person/department to speak with is (insert 
+		   name or department here). May I take a message so he/she/department can call you back”? 
+		   Always go the extra mile to assist our clients and their customers.</p>
+		<h3>We Can't Do That</h3>
+		<p>What's wrong with telling a customer "We can't do that?” After all, there are certain 
+		   things an organization may not be able to do. Focus on the positive. Let the caller know 
+		   what you can do for them and what paths are available to solve their problem.</p>
+		<h3>You'll Have to or You'll Need To</h3>
+		<p>Nobody likes to be ordered around, particularly when they are looking for help.  Instead,
+		   offer options and choices: “You may want to check the website for additional 
+		   information”.</p>
+		<h3>I'm Sorry, This Is (Just) the Call Center</h3>
+		<p>What this says to the caller: If you're sorry you’re the call center, you have just 
+		   diminished the value of your role. Alternative: Don't be sorry. Let them know them what 
+		   you can do to help them and what options are available.</p>
+		<h3>No (at the Beginning of the Sentence)</h3>
+		<p>Starting a sentence with the word “No” sets a negative tone and feels to the caller that
+		   you are putting up a roadblock instead of helping them. Instead, eliminate that word and
+		   offer options and focus on what you can do for them.</p>
+	</section>
+
+	<section id="links" class="section">
+		<h2>Quick Links</h2>
+		<a href="https://portal.americall.com/" target="_blank" title="Agent Timeclock">
+			Agent Timeclock
+		</a>
+		<br /><br />
+		<a href="http://training.americall.com" target="_blank" title="ALC">
+			AmeriCall Learning Center
+		</a>
+		<br /><br />
+		<a href="https://paychecks.intuit.com/" target="_blank" title="Paychecks">Paychecks</a>
+		<br /><br />
+		<a href="http://scheduling.americall.com" target="_blank" title="Schedule">Scheduling</a>
+		<br /><br />
+		<a href="http://mail.office365.com" target="_blank" title="Work Email">Work Email</a>
+		<br />
+		<p>If you do not know your log in credentials, ask the operations manager.</p>
+	</section>
+
+	<section id="rules" class="section">
+		<h2>Rules and Regulations</h2>
+		<p>You are to report to work 5 minutes before your shift and be ready to work. This includes
+		   being logged in and having any necessary websites open.</p>
+		<p>Sign into Infinity using your own assigned login. You must clock in accurately at all 
+		   times.</p>
+		<p>Calls are to be answered promptly, professionally, and cheerfully.</p>
+		<p>Messages are to be taken accurately.</p>
+		<p>Messages are to be given to dispatch to relay to the clients according to their 
+		   instructions.</p>
+		<p>No eating of any kind will be allowed in the call center. All drinks must be contained in a 
+       spill-proof container. There are no exceptions.</p>
+		<p>All instructions from supervisors will be followed at all times. If there is a problem with 
+       these instructions, you are to approach the operations manager privately.</p>
+		<p>No negative remark will be said about AmeriCall, its employees, or its clients.</p>
+		<p>Do not leave the call center without expressed permission from your supervisor. Your lunch 
+       break is the one exception.</p>
+		<p>Be a team player at all times.</p>
+		<p>Cell phones are to be silenced and in your purse or pocket. Never take out your phone in the
+       call center.</p>
+	</section>
+
+	<section id="bomb" class="section">
+		<h2>Bomb Threats</h2>
+		<p>As soon as a caller makes a bomb threat, press F5 to start recording. Alert your supervisor.
+       Try asking the following:</p>
+		<ul id="bombquestions">
+			<li>When is the bomb going to explode?</li>
+			<li>What does it look like?</li>
+			<li>What kind of bomb is it?</li>
+			<li>What will cause it to explode?</li>
+			<li>Did you place the bomb? Why?</li>
+			<li>What is your name?</li>
+			<li>What is your address?</li>
+		</ul>
+		<p>Was the language of the threat well-spoken? Incoherent? Foul? Taped? Irrational? Was the 
+       message read by the threat maker?</p>
+		<p>What was the caller's sex, race, and age?</p>
+		<p>Was the caller's voice calm? Nasally? Angry? Excited? Affected by a lisp or stutter? Slow? 
+       Raspy? Rapid? Deep? Soft? Slurred?</p>
+		<p>Were there noises in the background? What did they sound like?</p>
+	</section>
+	</div><!--End container-->
+</body>
+</html>
